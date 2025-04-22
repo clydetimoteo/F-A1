@@ -2,7 +2,6 @@
 require_once '../config/Database.php';
 $conn = (new Database())->getConnection();
 
-// MULTIPLE DELETE via POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['selected_ids'])) {
     $ids = $_POST['selected_ids'];
     $placeholders = implode(',', array_fill(0, count($ids), '?'));
@@ -12,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['selected_ids'])) {
     exit;
 }
 
-// SINGLE DELETE via GET
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $stmt = $conn->prepare("DELETE FROM students WHERE StudentID = ?");
@@ -21,6 +19,5 @@ if (isset($_GET['id'])) {
     exit;
 }
 
-// Fallback
 header("Location: index.php");
 exit;

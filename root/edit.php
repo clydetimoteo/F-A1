@@ -36,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!-- HTML Form -->
 <!DOCTYPE html>
 <html>
 <head>

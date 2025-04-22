@@ -30,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!-- HTML Form -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="container mt-4">
     <h2>Create Student</h2>
     <form method="post" enctype="multipart/form-data">
-        <!-- Profile, Names, Age -->
         <div class="form-group">
             <label>Profile Picture</label>
             <input type="file" name="profile_picture" class="form-control">
@@ -71,7 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <option value="Other">Other</option>
             </select>
         </div>
-        <!-- Contact -->
         <div class="form-group">
             <label>Email</label>
             <input type="email" name="email" required class="form-control">
